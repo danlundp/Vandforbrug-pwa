@@ -11,13 +11,13 @@ module.exports = {
                 cacheName: 'api-cache'
             }
             },
-            {
-                urlPattern: new RegExp('^http://backend.test/api/user'),
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'api-cache'
-                }
-            },
+            // {
+            //     urlPattern: new RegExp('^http://backend.test/api/user'),
+            //     handler: 'CacheFirst',
+            //     options: {
+            //         cacheName: 'api-cache'
+            //     }
+            // },
             {
                 urlPattern: new RegExp('^http://backend.test/api/logout'),
                 handler: 'CacheFirst',
@@ -56,6 +56,13 @@ module.exports = {
             },
             {
                 urlPattern: new RegExp('^http://backend.test/api/data/currentYearUsage/total/monthNumber'),
+                handler: 'CacheFirst',
+                options: {
+                    cacheName: 'api-cache'
+                }
+            },
+            {
+                urlPattern: new RegExp('^http://backend.test/api/data/monthlyUsageInDkk'),
                 handler: 'CacheFirst',
                 options: {
                     cacheName: 'api-cache'
